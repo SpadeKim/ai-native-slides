@@ -4,6 +4,7 @@ highlighter: shiki
 lineNumbers: false
 css: style.css
 transition: fade
+title: AI Native 환경 조성
 fonts:
   sans: Noto Sans KR
 ---
