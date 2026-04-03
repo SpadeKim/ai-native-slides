@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap');
+
+/* ── 전체 배경 ── */
+.slidev-layout {
+  background: #0d0d1a !important;
+  font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif !important;
+  color: #fff;
+  padding: 1.8rem 2.4rem !important;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* 기본 레이아웃 여백 제거 */
+.slidev-layout h1,
+.slidev-layout h2 {
+  margin-top: 0;
+}
+
+/* ── 그라디언트 제목 ── */
+.grad {
+  background: linear-gradient(90deg, #a855f7, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 900;
+  line-height: 1.2;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+/* ── 소제목 ── */
+.sub {
+  font-size: 0.82rem;
+  color: #555;
+  letter-spacing: 0.05em;
+  font-weight: 400;
+  margin-bottom: 0.2rem;
+}
+
+/* ══════════════════════════════
+   가로 Pill 플로우
+══════════════════════════════ */
+.pill-flow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.8rem 0;
+}
+.pf-item {
+  padding: 0.45rem 1.1rem;
+  border: 1.5px solid #2a2a4a;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #888;
+  background: transparent;
+}
+.pf-item.active {
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  border-color: transparent;
+  color: #fff;
+}
+.pf-arr {
+  color: #444;
+  font-size: 0.85rem;
+}
+
+/* ══════════════════════════════
+   3열 스탯 카드
+══════════════════════════════ */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 0.6rem 0;
+}
+.stat-card {
+  background: #13131f;
+  border: 1px solid #1e1e3a;
+  border-top: 3px solid #6366f1;
+  border-radius: 14px;
+  padding: 1.4rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.stat-card.cyan  { border-top-color: #06b6d4; }
+.stat-card.green { border-top-color: #10b981; }
+.stat-card.purple{ border-top-color: #a855f7; }
+.stat-card.orange{ border-top-color: #f97316; }
+.stat-card.indigo{ border-top-color: #6366f1; }
+
+.stat-emoji { font-size: 2rem; }
+.stat-num {
+  font-size: 2.2rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #a855f7, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+.stat-label { font-size: 0.8rem; color: #888; }
+.stat-badge {
+  background: #1e1e3a;
+  border-radius: 4px;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: #6366f1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.stat-badge.cyan  { color: #06b6d4; }
+.stat-badge.green { color: #10b981; }
+
+/* ══════════════════════════════
+   가로 타임라인
+══════════════════════════════ */
+.h-timeline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0;
+  margin: 1.2rem 0 0.8rem;
+}
+.h-tl-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+.h-tl-circle {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 0.4rem;
+  z-index: 1;
+}
+.h-tl-bar {
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  margin-bottom: 0.6rem;
+}
+.h-tl-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.2rem;
+}
+.h-tl-desc {
+  font-size: 0.62rem;
+  color: #666;
+  text-align: center;
+}
+
+/* 타임라인 색상 */
+.c-purple  { background: #a855f7; }
+.c-cyan    { background: #06b6d4; }
+.c-green   { background: #10b981; }
+.c-orange  { background: #f97316; }
+.t-purple  { color: #a855f7; }
+.t-cyan    { color: #06b6d4; }
+.t-green   { color: #10b981; }
+.t-orange  { color: #f97316; }
+
+/* ══════════════════════════════
+   카드 (상단 컬러 테두리)
+══════════════════════════════ */
+.card {
+  background: #13131f;
+  border-radius: 12px;
+  border: 1px solid #1e1e3a;
+  border-top: 3px solid #6366f1;
+  padding: 0.85rem 1.2rem;
+  margin-bottom: 0.6rem;
+}
+.card.orange  { border-top-color: #f97316; }
+.card.red     { border-top-color: #ef4444; }
+.card.purple  { border-top-color: #a855f7; }
+.card.cyan    { border-top-color: #06b6d4; }
+.card.indigo  { border-top-color: #6366f1; }
+.card.green   { border-top-color: #10b981; }
+
+/* 2열 카드 그리드 */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* ══════════════════════════════
+   번호 원
+══════════════════════════════ */
+.num {
+  display: inline-flex;
+  width: 2rem;
+  height: 2rem;
+  background: #6366f1;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 900;
+  color: #fff;
+  margin-right: 0.8rem;
+  flex-shrink: 0;
+  box-shadow: 0 0 12px rgba(99,102,241,0.4);
+}
+
+/* ══════════════════════════════
+   리스트 행
+══════════════════════════════ */
+.row {
+  display: flex;
+  align-items: center;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid #1a1a2e;
+  gap: 0.8rem;
+}
+.row:last-child { border-bottom: none; }
+.row-icon { font-size: 1.3rem; width: 2rem; text-align: center; flex-shrink: 0; }
+.row-content { flex: 1; }
+.row-title  { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: 0.15rem; }
+.row-desc   { font-size: 0.72rem; color: #888; }
+
+/* ══════════════════════════════
+   좌측 세로 타임라인 컨테이너
+══════════════════════════════ */
+.timeline-wrap { display: flex; gap: 1.5rem; }
+.timeline-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1.1rem;
+}
+.tl-bar {
+  width: 2px;
+  background: linear-gradient(180deg, #6366f1, #a855f7);
+  flex: 1;
+}
+.tl-arrow { color: #6366f1; font-size: 1.1rem; margin-top: 0.2rem; }
+.tl-label {
+  writing-mode: vertical-rl;
+  font-size: 0.6rem;
+  color: #444;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.4rem;
+}
+.timeline-content { flex: 1; }
+
+/* ══════════════════════════════
+   하단 흐름 바
+══════════════════════════════ */
+.flow-bar {
+  background: #13131f;
+  border-radius: 8px;
+  padding: 0.55rem 1.2rem;
+  font-size: 0.78rem;
+  color: #888;
+  text-align: center;
+  margin-top: 0.8rem;
+}
+.flow-bar .arr { color: #6366f1; margin: 0 0.5rem; }
+
+/* ══════════════════════════════
+   파이프라인
+══════════════════════════════ */
+.pipeline { display: flex; align-items: center; gap: 0.3rem; margin: 0.8rem 0; }
+.pipe-box {
+  background: #13131f;
+  border: 1.5px solid #6366f1;
+  border-radius: 8px;
+  padding: 0.5rem 0.6rem;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #a5b4fc;
+  flex: 1;
+}
+.pipe-arr { color: #6366f1; font-size: 0.9rem; }
+
+/* ══════════════════════════════
+   큰 수치
+══════════════════════════════ */
+.big-num {
+  font-size: 2rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #a855f7, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  white-space: nowrap;
+}
+.big-label { font-size: 0.8rem; color: #888; margin-top: 0.2rem; }
+
+/* ══════════════════════════════
+   위기 카드
+══════════════════════════════ */
+.crisis {
+  background: #150808;
+  border: 1px solid #7f1d1d;
+  border-top: 3px solid #ef4444;
+  border-radius: 10px;
+  padding: 0.85rem 1.1rem;
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.crisis-icon  { font-size: 1.4rem; flex-shrink: 0; }
+.crisis-body  { flex: 1; }
+.crisis-title { font-size: 1rem; font-weight: 700; color: #fca5a5; margin-bottom: 0.2rem; }
+.crisis-desc  { font-size: 0.72rem; color: #888; }
+.crisis-tag {
+  font-size: 0.62rem;
+  color: #ef4444;
+  border: 1px solid #7f1d1d;
+  border-radius: 999px;
+  padding: 0.15rem 0.55rem;
+  white-space: nowrap;
+  align-self: center;
+}
+
+/* ══════════════════════════════
+   비교 패널 (좌우)
+══════════════════════════════ */
+.vs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  height: auto;
+}
+.panel {
+  background: #13131f;
+  border: 1px solid #1e1e3a;
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.panel.active { border-color: #6366f1; }
+.panel-title {
+  text-align: center;
+  font-size: 0.82rem;
+  margin-bottom: 0.7rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #1e1e3a;
+}
+.step-item {
+  background: #0f0f1c;
+  border-radius: 6px;
+  padding: 0.4rem 0.6rem;
+  margin-bottom: 0.3rem;
+  font-size: 0.78rem;
+  color: #ccc;
+}
+.step-arr { text-align: center; font-size: 0.65rem; color: #333; margin: 0.15rem 0; }
+
+/* ══════════════════════════════
+   Pill / 뱃지
+══════════════════════════════ */
+.pill {
+  display: inline-block;
+  background: #6366f1;
+  border-radius: 999px;
+  padding: 0.3rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #fff;
+}
+.pill.outline {
+  background: transparent;
+  border: 1.5px solid #6366f1;
+  color: #a5b4fc;
+}
+
+/* ══════════════════════════════
+   스테이지 카드 (사례 슬라이드)
+══════════════════════════════ */
+.stage-card {
+  flex: 1;
+  background: #13131f;
+  border: 1px solid #2a2a4a;
+  border-top: 3px solid #6366f1;
+  border-radius: 10px;
+  padding: 0.7rem 0.5rem 0.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  text-align: center;
+  min-width: 0;
+}
+.stage-label {
+  font-size: 0.55rem;
+  color: #555;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
+.stage-icon {
+  font-size: 1.6rem;
+  margin: 0.2rem 0;
+}
+.stage-title {
+  font-size: 0.85rem;
+  font-weight: 900;
+  color: #a5b4fc;
+}
+.stage-desc {
+  font-size: 0.62rem;
+  color: #666;
+  line-height: 1.4;
+}
+.stage-arr {
+  display: flex;
+  align-items: center;
+  color: #6366f1;
+  font-size: 1rem;
+  padding: 0 0.3rem;
+  padding-bottom: 1.2rem; /* 아이콘 높이 보정 */
+  flex-shrink: 0;
+}
+
+/* ── S6: 왼쪽 하이라이트 / 오른쪽 CSS filter 등장 ── */
+.s6-left { border-color: #6366f1; transition: border-color 0.45s ease; }
+.s6-left-title { color: #a5b4fc; transition: color 0.45s ease; }
+/* click4: step4 등장 → 왼쪽만 디하이라이트 */
+.vs-grid:has(.s6-step4:not(.slidev-vclick-hidden)) .s6-left { border-color: #1e1e3a; }
+.vs-grid:has(.s6-step4:not(.slidev-vclick-hidden)) .s6-left-title { color: #666; }
+/* click5: circle1 등장 → 오른쪽 패널 밝아짐 */
+.s6-right-panel { filter: brightness(0.2) blur(2px); transition: filter 0.5s ease; }
+.vs-grid:has(.s6-circle1:not(.slidev-vclick-hidden)) .s6-right-panel { filter: brightness(1) blur(0); }
+
+/* ── slidev v-click 페이드인 ── */
+.slidev-vclick-target {
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+.slidev-vclick-hidden {
+  opacity: 0 !important;
+  transform: translateY(10px);
+  pointer-events: none;
+}
